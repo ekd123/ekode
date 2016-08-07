@@ -1,0 +1,14 @@
+(def-*)
+ | - def-func           define a function
+ | - def-var            define a variable
+ | - def-macro          define a macro
+
+(set*)
+ | - set                set a value to a symbol
+
+(def-func hi ()
+  (println "hi"))
+; equals (def-var hi :type function (lambda () (println "hi")))
+
+(hi)
+

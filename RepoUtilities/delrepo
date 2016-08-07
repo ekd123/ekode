@@ -1,0 +1,58 @@
+#!/usr/bin/python
+
+## delrepo (GNU LGPLv3+)
+## Written by Mike Ma
+## 
+## This file can help you
+## remove a repo file
+
+import os
+import sys
+import getpass
+
+# def var
+repo_dir="/etc/yum.repos.d"
+
+# def func
+def show_usage():
+    print ("""Usage: delrepo RepoName [TYPE]
+For example: 
+        1> delrepo fedora-163 (= rm /etc/yum.repos.d/fedora-163.repo)
+        2> delrepo chromium sfp (= rm /etc/yum.repos.d/fedora-chromium.repo)
+If you have a repo that installed by 'addrepo fp XXX' you can run 'delrepo RepoName' directly.
+
+RepoName        The repo file name that you have installed. (No .repo)
+TYPE
+         1> normal
+            = run 'delrepo RepoName'
+         2> sfp
+            remove a standard fedorapeople repo.
+""")
+def start_del_ex(sfilename,stype):
+    filename=sfilename
+    if stype == "normal":
+        os.remove(repo_dir+"/"+filename+".repo")
+    elif stype == "sfp":
+        os.remove(repo_dir+"/fedora-"+filename+".repo")
+    return True
+
+def start_del(filename):
+    return start_del_ex(filename, "normal")
+
+# is it running as root?
+if getpass.getuser() != "root":
+    print ("You must run delrepo as root!")
+
+# is it fedora?
+if os.path.exists("/etc/fedora-release")==False:
+    print ("You must run it in Fedora!")
+
+if len(sys.argv)<2:
+    show_usage()
+elif len(sys.argv)==2:
+    start_del(sys.argv[1])
+elif len(sys.argv)==3:
+    start_del_ex(sys.argv[1], sys.argv[2])
+elif len(sys.argv)>3:
+    print ("too many arguments")
+    show_usage()

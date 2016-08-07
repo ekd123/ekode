@@ -1,0 +1,5 @@
+how to test
+===========
+./build.sh # first make sure the lua's pkgconfig in your system is named lua-5.1, otherwise, modify it
+./test
+./cleanup

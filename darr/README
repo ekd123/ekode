@@ -1,0 +1,23 @@
+D-Arr: the implementation of a typeless dynamic array
+=====================================================
+
+This is 0.1 stable.
+
+Hate C's arrays? Hate limits? 
+Like a stable dynamic arrays library?
+You need darr!!
+
+
+darr is a fast and easy-to-use dynamic array library.
+It's written in C, so you can use it everywhere.
+It's typeless, so you can use any types.
+
+Like it? Download today!
+
+
+Mike Ma <zhtx10 At gmail dOT com>
+[about name: darr = dynamic arrays]
+
+
+
+

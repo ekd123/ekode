@@ -1,0 +1,112 @@
+#!/usr/bin/python
+
+## addrepo (GNU LGPLv3+)
+## Written by Mike Ma
+## 
+## This file can help you add a repo
+## to your system
+
+import os
+import getpass
+import sys
+import urllib
+
+#def var
+repo_dir="/etc/yum.repos.d"
+type=""
+info1=""
+info2=""
+sfp_header="http://repos.fedorapeople.org/repos"
+
+#def func
+def show_usage():
+    print ("""Usage: addrepo TYPE INFO [INFO]
+TYPE:
+     www       download repo from Internet.
+                   info1: URL.
+     sfp       standard fedora people repo. need two information
+                   info1: group name.
+                   info2: software name.
+     fp        fedora people repo. need two information
+                   info1: The username in FedoraPeople.
+                   info2: repo file name. (no .repo)""")
+
+def download_by_url(url,filename):
+    print ("downloading " + url + " to " + filename)
+    data = urllib.urlopen(url).read()
+    f = file(filename,"w")
+    f.write(data)
+    f.close()
+    print (data)
+    print ("Done. Please check the file (if it's wrong, please delete that file and try the correct URL again)")
+
+def check_http_and_add(url):
+    if url.find("http://") == -1:
+        return "http://" + url
+    return url
+
+def get_filename_from_url(url):
+    arr=url.split("/")
+    return arr[len(arr)-1]
+
+def check_string(sstr):
+    if sstr==None: return False
+    if sstr==""  : return False
+    return True
+
+def show_error_and_exit_info():
+    print ("information is invalid!")
+    exit(-1)
+
+# is it fedora?
+if os.path.exists("/etc/fedora-release") == False:
+    print ("You must run addrepo in Fedora")
+    exit (-1)
+
+# arg...
+if len(sys.argv) < 3:
+    show_usage()
+    exit(-1)
+if len(sys.argv) > 4:
+    print ("Too many arguments")
+    show_usage()
+    exit (-1)
+# is it root?
+if getpass.getuser() != "root":
+    print ("You must run addrepo as root")
+    exit(-1)
+# check dir
+if os.path.exists(repo_dir) == False:
+    print ("Can't find "+repo_dir)
+    exit(-1)
+
+############################################
+type = sys.argv[1]  # doesn't need to check
+info1 = sys.argv[2]
+if check_string(info1) == False:
+    show_error_and_exit_info()
+
+if type == "www":
+    print ("Type: Repo from Internet")
+    info1 = check_http_and_add(info1)
+    print ("url is " + info1)
+    print ("filename is " + get_filename_from_url(info1))
+    download_by_url(info1, repo_dir + "/" + get_filename_from_url(info1))
+    exit (0)
+elif type == "sfp":
+    info2 = sys.argv[3]
+    if check_string(info2) == False: show_error_and_exit_info()
+    print ("Type: Standard Fedorapeople.org Repo")
+    url = sfp_header+"/"+info1+"/" + info2 + "/fedora-"+info2+".repo"
+    download_by_url(url, repo_dir + "/" + get_filename_from_url(url))
+    exit (0)
+elif type == "fp":
+    info2 = sys.argv[3]
+    if check_string(info2) == False: show_error_and_exit_info()
+    print ("Type: Non-standard Fedorapeople.org Repo")
+    url = "http://"+info1+".fedorapeople.org/"+info2+".repo"
+    download_by_url(url, repo_dir + "/" + get_filename_from_url(url))
+    exit (0)
+else:
+    print ("Invalid type")
+    show_usage()

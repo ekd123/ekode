@@ -1,0 +1,3 @@
+rrand stands for "real random numbers"
+
+It only works on Linux because it uses /dev/random (a hardware random number generator)

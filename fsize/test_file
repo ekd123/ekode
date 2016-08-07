@@ -1,0 +1,7 @@
+this is a sample file.
+
+
+there is some Chinese words.
+你好。
+这是一个简单的测试文件，test.c会调用fsize得到它的大小。
+（如果大小小于0，则说明函数出现了错误。`）

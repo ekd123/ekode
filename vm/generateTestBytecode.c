@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+/**
+ * This program computes 100+30+30*5=280
+ * The final result is in eax
+ */
+
+int main(int argc, char *argv[])
+{
+    FILE *fo;
+    fo = fopen("./test.bc", "w");
+    /* mov 3, 5 */
+    fprintf(fo, "%c%c%c%c%c%c", 0x01, 0x03, 0x05, 0x00, 0x00, 0x00);
+    /* mov 1, 100d */
+    fprintf(fo, "%c%c%c%c%c%c", 0x01, 0x01, 0x64, 0x00, 0x00, 0x00);
+    /* mov 2, 30d */
+    fprintf(fo, "%c%c%c%c%c%c", 0x01, 0x02, 0x1E, 0x00, 0x00, 0x00);
+    /* add 1, 2 */
+    fprintf(fo, "%c%c%c%c%c%c", 0x02, 0x01, 0x02, 0x00, 0x00, 0x00);
+    /* loop 3, 3 */
+    fprintf(fo, "%c%c%c%c%c%c", 0x07, 0x03, 0x03, 0x00, 0x00, 0x00);
+    /* die */
+    fprintf(fo, "%c%c%c%c%c%c", 0x08, 0x00, 0x00, 0x00, 0x00, 0x00);
+    /* jmp 0 */
+//    fprintf(fo, "%c%c%c%c%c%c", 0x06, 0x00, 0x00, 0x00, 0x00, 0x00);
+    fclose(fo);
+    return 0;
+}

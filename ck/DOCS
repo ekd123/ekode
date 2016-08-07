@@ -1,0 +1,16 @@
+Functions Reference Manual
+==========================
+void ck_init (void);
+    This function initializes ck.
+    Must call it before calling ck_fork.
+
+pid_t ck_fork (void);
+    wrapper for fork.
+    Returns: the same as fork's.
+
+Configure CK
+============
+Just edit ckconfig.h.
+
+* CK_POLL_SECONDS: custom the sleeping time.
+

@@ -1,0 +1,6 @@
+
+How to read something through GIO, and in fact, how to use g_data_input_stream_read_line.
+
+readline.c: Read from stdin and print to stdout. GUnixInputStream to open a fd.
+read.c: Read anything through GIO.
+

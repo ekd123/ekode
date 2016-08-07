@@ -1,0 +1,12 @@
+#!/bin/sh
+# build script for fsize and test.
+# Written by Mike Ma
+
+CC=cc
+
+cflags="-Wall"
+
+target=test
+
+# build test
+$CC test.c fsize.c $cflags -o $target

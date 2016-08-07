@@ -1,0 +1,8 @@
+just copy files to /usr/bin/ easily.
+
+run the commands below:
+# cp *repo /usr/bin/
+
+then you can use them
+
+if can't, you can try chmod.

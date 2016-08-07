@@ -1,0 +1,22 @@
+main () {
+    {
+        var f = File ("Test", CREATE);
+        printlnTo (f, "Hi!");
+    }
+    {
+        var f = File ("Test", APPEND);
+        printlnTo (f, "Again");
+    }
+    {
+        var f = File ("Test", READ);
+        var i = 0;
+        while (true) {
+            var line = readLine (f);
+            if (empty? (line))
+                break;
+            print (line);
+            i+=1;
+        }
+        println ("Total: ", i, " lines.");
+    }
+}

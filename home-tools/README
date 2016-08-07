@@ -1,0 +1,16 @@
+HOME-Tools helps you compile HShell.
+
+USAGE
+=====
+./home-tools.sh [--with-install]
+
+After input the working directory, all the steps will be done automatically.
+
+If you want to install rather than just build them, you should run 
+"home-tools.sh --with-install".
+
+Note that HOME-tools only accpet this argument and other arguments will be
+ignored.
+
+Because HShell needs eggtraymanager to run, you may always want to run it 
+with --with-install.

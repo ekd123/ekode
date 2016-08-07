@@ -1,0 +1,15 @@
+This is an example of GResource.
+
+Compile *with* constructor:
+        $ make -f Makefile.constructor
+        $ ./a.out
+        $ make -f Makefile.constructor clean
+
+Compile *without* constructor:
+        $ make 
+        $ ./a.out
+        $ make clean
+
+Both of them accept cc variable. e.g.
+        $ make cc=clang
+

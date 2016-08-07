@@ -1,0 +1,40 @@
+Empty List
+====================
+* (none) <- current
+====================
+
+Hit Key 'a'
+====================
+* Hit Key 'a' <- current
+====================
+
+Hit Key 'b'
+====================
+* Hit Key 'a'
+* Hit Key 'b' <- current
+====================
+
+Undo
+====================
+* Hit Key 'a' <- current
+* Hit Key 'b'
+====================
+
+Redo
+====================
+* Hit Key 'a'
+* Hit Key 'b' <- current
+====================
+
+Undo
+====================
+* Hit Key 'a' <- current
+* Hit Key 'b'
+====================
+
+Hit key 'c'
+====================
+* Hit Key 'a'
+* Hit Key 'c' <- current
+====================
+

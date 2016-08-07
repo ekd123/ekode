@@ -1,0 +1,27 @@
+import libc.(strdup, free);
+
+/*  */
+record Cat (age: Int);
+
+/* constructor */
+overload Cat (age: Int) --> returned: Cat {
+    returned.age = age;
+}
+
+/* just like CLOS's generic function, used for type Cat */
+meow (cat: Cat) {
+    print ("Meow~~ -- said a cat who is ", cat.age);
+    if (cat.age > 1)
+        println (" years old");
+    else
+        println (" year old");
+}
+
+main () {
+    var kitty = Cat (1);
+    var supercat = Cat (25);
+    var clone = kitty;
+    meow (kitty);
+    meow (supercat);
+    meow (clone);
+}

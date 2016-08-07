@@ -1,0 +1,9 @@
+-cp src
+-main Main
+-js output/scripts/index.js
+
+--next
+
+-cp svr
+-main Responder
+-php output/responder

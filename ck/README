@@ -1,0 +1,36 @@
+ck: the children killer
+=======================
+this library saves your life from too many children processes.
+it's default not to kill children if the parent died.
+Irix and Linux has some features to help you but not portable.
+
+ck is more portable. it's able to run under all the POSIX platforms.
+
+What does ck do?
+================
+* ck manages all children created by ck_fork.
+* if parent quits, then kill them!
+* if a child quits, then the parent removes the item from the children list.
+* if parent has received a signal that can make the process quit, then kill
+  all the children.
+
+What will happen if a process is created by ck_fork?
+====================================================
+* create a thread to poll if the ppid is changed.
+  this can find out if the parent was killed by SIGKILL.
+* do whatever you want!
+
+for example?
+============
+See test.c in src.
+
+To compile it:
+   $ cd src
+   $ cc *.c darr/*.c
+
+Run ./a.out to see what test suite is here.
+
+Result
+======
+Yeah, the child died after the parent died.
+And we didn't see "still here".

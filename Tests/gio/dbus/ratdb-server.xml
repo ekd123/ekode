@@ -1,0 +1,15 @@
+<node>
+  <interface name="org.ratdb.Engine.Interface">
+    <!--
+        Request:
+        @type: type of engine you want
+        
+        Request for loading the engine you want.
+    -->
+    <method name="Request">
+      <arg direction="in" type="s" name="type" />
+    </method>
+
+  </interface>
+
+</node>

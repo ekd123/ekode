@@ -1,0 +1,47 @@
+Useless code by ekd123. Code is released into public domain unless 
+its license is stated explicitly. (but I'll be more than glad if you 
+use them and tell me...)
+
+=== vm
+    a simple virtual machine and it doesn't work (yet)
+
+=== XiaoVM
+    a simple virtual machine and actually works
+
+=== SyntaxHightlighter-tcl
+    as its name suggests...
+
+=== cl-xmppgame
+    actually it's a robot framework for group chatting programs based on xmpp
+
+=== RepoUtilities
+    help you add or delete a repo in Fedora.
+
+=== cwenlisp
+    an incomplete lisp implementation
+
+=== fsize
+    get file size in C
+
+=== split
+    split a string into many strings.
+
+=== darr
+    a fast typeless dynamic arrays library for C.
+    written in ANSI C. 
+
+=== rrand
+    generate real random number. only for modern UNIXes.
+
+=== ck
+    Kill children processes. See README in that directory.
+
+=== gobj-helpers
+    Helpers made GObject easy.
+
+=== home-tools
+    Tools help you compile and install HShell-related things.
+
+=== Tests
+    my own tests code.
+

@@ -1,0 +1,3 @@
+test for OpenCC
+
+this program needs a conf file just like 'opencc -c '. or it will crash.

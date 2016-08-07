@@ -1,0 +1,8 @@
+wenlisp - brand-new lisp
+========================
+(require "GI")
+(GI:require "Gtk")
+(setf window (make-instance 'Gtk:Window))
+(.title window "good! wenlisp working")
+(show_all window)
+(Gtk:main)
