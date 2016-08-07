@@ -2,6 +2,9 @@ Useless code by ekd123. Code is released into public domain unless
 its license is stated explicitly. (but I'll be more than glad if you 
 use them and tell me...)
 
+=== Biligo
+    a user interface to bilidan and it's useless
+
 === vm
     a simple virtual machine and it doesn't work (yet)
 
