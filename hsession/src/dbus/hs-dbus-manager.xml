@@ -1,0 +1,51 @@
+<node>
+  <!-- org.home.hsession.Manager
+       @short_description: Proxy of HSession
+  -->
+  <interface name="org.home.hsession.Manager.Power">
+    <!-- 
+         Halt:
+         
+         Power off.
+    -->
+    <method name="Halt">
+    </method>
+
+    <!-- 
+         Restart:
+         
+         Reboot.
+    -->
+    <method name="Restart">
+    </method>
+
+    <!--
+        Suspend
+        
+        Suspend
+    -->
+    <method name="Suspend">
+    </method>
+
+    <!--
+        Hibernate
+        
+        Hibernate
+    -->
+    <method name="Hibernate">
+    </method>
+  </interface>
+
+  <!-- org.home.hsession.Manager.Session:
+       Session manager.
+  -->
+  <interface name="org.home.hsession.Manager.Session">
+    <!--
+        Logout:
+        
+        Log out.
+    -->
+    <method name="Logout">
+    </method>
+  </interface>
+</node>

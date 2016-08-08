@@ -1,0 +1,25 @@
+0.1 TODOs
+
+CURRENT
+
+SKIPPED
+* set a image for activities
+* HsHotkey
+  * GtkHotkey still uses GTK2. Removed hs-hotkey.[ch] from Makefile.am.
+    Need to port.
+
+GOALS (690% of 700%)
+* panel (100%)                      > done
+* overview mode (100%)              > done
+* dash (100%)                       > done
+* app chooser (100%)                > done
+* ext system (100%)                 > done
+* tray icon (100%)                  > done
+* hotkey, Run (90%)
+
+RELENG
+* coding work                       > working
+* release alpha, test (me)
+* release beta and test (public)
+* release RC for final changes
+* release 0.1

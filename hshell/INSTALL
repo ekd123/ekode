@@ -1,0 +1,11 @@
+A Simple Installation
+=====================
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+$ sudo make install
+
+
+If you want to install somewhere else, you could use
+`cmake .. -DCMAKE_INSTALL_PREFIX=[/your/prefix]`.

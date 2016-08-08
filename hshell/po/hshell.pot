@@ -1,0 +1,187 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-23 01:00+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-app-chooser.c:229
+#, c-format
+msgid "Could not load icon: %s\n"
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-app-chooser.c:272
+#, c-format
+msgid "Could not load the icon: %s"
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-app-chooser.c:278
+msgid "Don't know what the icon is..."
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-app-chooser.c:298
+msgid "Something bad in the App Chooser?"
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-app-chooser.c:298
+msgid "Sorry I could not know what are you doing..."
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-app-chooser.c:307
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-dash.c:82
+msgid "Could not run the program"
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-app.c:74
+msgid "HShell is starting."
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-app.c:77
+#, c-format
+msgid ""
+"You are using the debug version. You may also want to runhshell by "
+"'G_MESSAGES_DEBUG=all hshell'"
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-app.c:109
+msgid "Another instance is trying to start!"
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-app.c:111
+msgid ""
+"Another instance is trying to start. \n"
+" This action has been rejected.If you really want to start a new instance,"
+"run 'hshell --replace'. \n"
+"Note that this option would replace the current workinginstance.\n"
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-app.c:138
+msgid "Stop."
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-ext-manager.c:83
+msgid "HShell Extension Manager is starting."
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-ext-manager.c:97
+#, c-format
+msgid "ExtManager: Loading %s"
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-ext-manager.c:179
+#, c-format
+msgid "%s is not readable, skipped: %s"
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-ext-manager.c:204
+#, c-format
+msgid "%s is not readable: %s"
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-ext-manager.c:267
+#, c-format
+msgid "Could not load the extension because %s"
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-ext.c:91
+msgid "HShell Extension System is initializing Lua support."
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-ext.c:99
+msgid "lua_open() returned NULL. ExtSys can't be started."
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-ext.c:111
+msgid "HShell Extension System is starting."
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-message.c:48
+msgid "Warning!"
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-overview-window.c:80
+msgid "HShell Overview Mode is staring."
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-overview-window.c:135
+msgid "HShell Overview Mode is hiding."
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-overview-window.c:149
+msgid "HShell Overview Mode is showing."
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-overview.c:92
+msgid "Activities"
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-panel.c:94
+msgid "HShell Panel is starting."
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-panel.c:104
+msgid "Error loading configuration 'Screen_Reserve'"
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-panel.c:118
+msgid "Could not get information of your monitor."
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-panel.c:212
+msgid "You shouldn't reach here. You may find a new bug."
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-power.c:49
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-power.c:92
+msgid "Could not halt (stage 1)"
+msgstr ""
+
+#. FIXME: TODO: HM
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-power.c:60
+msgid "Could not halt (stage 2)"
+msgstr ""
+
+#. FIXME: TODO: HM
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-power.c:68
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-power.c:109
+#, c-format
+msgid "Could not halt (stage 3) because %s"
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-power.c:102
+#, c-format
+msgid "Could not halt (stage 2) because %s"
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-run.c:67
+msgid "Write the command you wish to run here:"
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-run.c:70
+msgid "_Run"
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-run.c:114
+msgid "'Run' is showing."
+msgstr ""
+
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-run.c:121
+msgid "'Run' is hiding"
+msgstr ""
+
+#. FIXME: This behavior will be changed later
+#: /home/mike/Projects/hshell/b/po/../..//src/hs-user-button.c:74
+msgid "Click to shut down"
+msgstr ""
