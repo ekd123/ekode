@@ -1,0 +1,16 @@
+Known Problems.
+
+They must be fixed before releasing.
+
+* Version 0.0
+** Important Bugs
+*** (1)[FIXED] If a client connected will show so many warnings about properties.
+*** (2)[FIXED] RatdbCommand problems.
+*** (3)[FIXED] ratdb_command_wait always return false. but the older version doesn't have this bug.
+*** (4)[FIXED] If a client has sent 3 messages, the fourth sending will break the connection.
+*** (5)[FIXED] If quit normally, ratdbd will received a SIGSEGV.
+
+** Normal Bugs
+*** (1)When two clients connect, then they disconnect. If the second one disconnects first, it will remove the first one from list.
+   (Hashtable? Session Key? Need more tests.)
+

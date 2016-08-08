@@ -1,0 +1,19 @@
+
+you need autoconf, automake, intltool & libtool to build.
+
+First you need to run ./autogen.sh.
+This script helps you create the configure script, or you can't do anything.
+(even though you can build it manually)
+
+You can use autogen.sh just like configure.
+
+It will help you create Makefiles. When you've done with configure,
+you can use make now.
+
+Good luck.
+
+A VERY SIMPLE INSTALLATION
+$ ./autogen.sh --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc
+$ make -j5
+$ sudo make install
+

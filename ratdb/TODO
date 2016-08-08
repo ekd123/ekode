@@ -1,0 +1,11 @@
+-*- mode: org -*-
+
+This file covers the "short term goals" of RatDB, in no particular order. 
+It may help you track changes between two versions.
+
+Direction of RatDB can be found [[http://ekd123.org/blog/ratdb-goals][here]].
+Tasks for a release can also be found in [[http://tasktaste.com/projects/ekd123/ratdb][tasktaskte.com]], a website which can calculate the release date.
+
+* TODO Do a complete security review.
+ - Time:       [*****]
+ - Difficulty: [***  ]

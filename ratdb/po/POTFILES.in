@@ -1,0 +1,11 @@
+src/ratdbclient.c
+src/ratdbserver.c
+src/ratdbdaemon.c
+src/ratdbconnection.c
+src/ratdbsettings.c
+src/ratdbdbmmfile.c
+src/main.c
+
+libratdb/ratdbclient.c
+libratdb/ratdbsettings.c
+

@@ -1,0 +1,8 @@
+<schemalist>
+  <schema id="org.ratdb" path="/org/ratdb/">
+    <key name="daemon-socket-path" type="s">
+      <summary>The path of the socket file</summary>
+      <default>"/tmp/ratdb-socket"</default>
+    </key>
+  </schema>
+</schemalist>

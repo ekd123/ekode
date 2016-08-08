@@ -1,0 +1,14 @@
+* Version in configure.ac
+* NEWS
+* Test the main program
+* Test tests
+* Test dryrun.sh
+* Test gtk-doc
+* Test gobject-introspection
+* Push to develop
+* Merge to alpha, and test
+* Merge to beta, and test
+* Merge to rc, and test
+* Merge to master, if there's no bug
+* Create a new tag
+* Announce a new version

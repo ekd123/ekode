@@ -1,0 +1,12 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: RatDB
+Description: Headers for Server-side RatDB Development
+Version: @PACKAGE_VERSION@
+Requires: gobject-2.0 gio-2.0 glib-2.0 gio-unix-2.0
+Libs: -L${libdir}
+Cflags: -I${includedir}/ratdb
+

@@ -1,0 +1,67 @@
+#  Chinese  translations for RatDB
+# Copyright (C) 2011 Mike Manilone
+# This file is distributed under the same license as the RatDB package.
+# Mike Manilone <zhtx10@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-02-15 22:37+0800\n"
+"PO-Revision-Date: 2012-02-15 22:39+0800\n"
+"Last-Translator: Mike Manilone <crtmike@gmail.com>\n"
+"Language-Team: Mike Manilone <crtmike@gmail.com>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/server/ratdbdaemon.c:180
+msgid "Oops.. Failed to create sockets!"
+msgstr "糟糕，创建套接字失败！"
+
+#: ../src/server/ratdbdaemon.c:194
+#, c-format
+msgid "failed to listen: %s"
+msgstr "侦听失败： %s"
+
+#. something really bad happened. (the client is dead?)
+#: ../src/server/ratdbconnection.c:88
+msgid "Connection lost."
+msgstr "连接丢失。"
+
+#. begin to serve.
+#: ../src/server/main.c:53
+#, c-format
+msgid "Welcome to %s. Please report bugs to %s\n"
+msgstr "欢迎使用 %s。请向 %s 报告程序错误。\n"
+
+#: ../src/server/main.c:59
+#, c-format
+msgid ""
+"Failed to register: %s.\n"
+"Please check whether 'ratdbd' is running right now.\n"
+msgstr ""
+"注册失败：%s。\n"
+"请检查ratdbd是否已经运行了？\n"
+
+#: ../src/client/ratdbclient.c:61
+#, c-format
+msgid "Failed to close the socket: %s"
+msgstr "关闭套接字失败：%s"
+
+#: ../src/client/ratdbclient.c:106
+#, c-format
+msgid "Failed to create a socket object: %s"
+msgstr "创建套接字对象失败：%s"
+
+#: ../src/client/ratdbclient.c:153
+#, c-format
+msgid "Failed to connect to the daemon: %s"
+msgstr "连接到守护进程失败：%s"
+
+#~ msgid "My heart is always yours. However, your heart flew away.\n"
+#~ msgstr "我的心儿永远属于你。然而，你的心儿却飞向了远方。\n"
+
+#~ msgid "Enable debug option: echo all messages"
+#~ msgstr "开启调试选项：回显所有消息"

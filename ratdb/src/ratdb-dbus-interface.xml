@@ -1,0 +1,91 @@
+<node>
+  <interface name="org.ratdb.Proxy.Engine">
+
+    <method name="Request">
+      <arg direction="in" type="s" name="type" />
+      <arg direction="out" type="s" name="uuid" />
+    </method>
+
+    <method name="NewDatabase">
+      <arg direction="in" type="s" name="uuid" />
+      <arg direction="in" type="i" name="flags" />
+      <arg direction="in" type="s" name="name" />
+      <arg direction="in" type="s" name="path" />
+      <arg direction="in" type="s" name="version" />
+      <arg direction="in" type="s" name="user_data" />
+    </method>
+
+    <method name="NewTable">
+      <arg direction="in" type="s" name="uuid" />
+      <arg direction="in" type="s" name="name" />
+      <arg direction="in" type="s" name="user_data" />
+    </method>
+
+    <method name="NewItem">
+      <arg direction="in" type="s" name="uuid" />
+      <arg direction="in" type="s" name="name" />
+      <arg direction="in" type="s" name="schema" />
+      <arg direction="in" type="as" name="values" />
+      <arg direction="in" type="s" name="user_data" />
+    </method>
+
+    <method name="DeleteItem">
+      <arg direction="in" type="s" name="uuid" />
+      <arg direction="in" type="s" name="condition" />
+      <arg direction="out" type="i" name="result" />
+      <arg direction="in" type="s" name="user_data" />
+    </method>
+
+    <method name="DeleteTable">
+      <arg direction="in" type="s" name="uuid" />
+      <arg direction="in" type="s" name="condition" />
+      <arg direction="out" type="i" name="result" />
+      <arg direction="in" type="s" name="user_data" />
+    </method>
+
+    <method name="ListTables">
+      <arg direction="in" type="s" name="uuid" />
+      <arg direction="in" type="s" name="condition" />
+      <arg direction="out" type="as" name="result" />
+      <arg direction="in" type="s" name="user_data" />
+    </method>
+
+    <method name="SelectTable">
+      <arg direction="in" type="s" name="uuid" />
+      <arg direction="in" type="s" name="condition" />
+      <arg direction="in" type="s" name="user_data" />
+    </method>
+
+    <method name="Next">
+      <arg direction="in" type="s" name="uuid" />
+      <arg direction="in" type="s" name="user_data" />
+    </method>
+
+    <method name="Prev">
+      <arg direction="in" type="s" name="uuid" />
+      <arg direction="in" type="s" name="user_data" />
+    </method>
+
+    <method name="Search">
+      <arg direction="in" type="s" name="uuid" />
+      <arg direction="in" type="s" name="condition" />
+      <arg direction="in" type="s" name="user_data" />
+    </method>
+
+    <method name="Rewind">
+      <arg direction="in" type="s" name="uuid" />
+      <arg direction="in" type="s" name="user_data" />
+    </method>
+
+    <method name="ExtraData">
+      <arg direction="in" type="s" name="uuid" />
+      <arg direction="out" type="s" name="result" /> <!-- return value of the function -->
+      <arg direction="in" type="s" name="user_data" />
+    </method>
+
+    <method name="RemoveClient">
+      <arg direction="in" type="s" name="uuid" />
+    </method>
+
+  </interface>
+</node>

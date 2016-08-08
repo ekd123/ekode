@@ -1,0 +1,187 @@
+2013-03-24 Mike Manilone <crtmike@gmx.us> - commit 1
+	* src/ratdb-macros.h (RATDB_CONNECT_DBUS_IFACE): added
+	* src/ratdb-daemon.c: handling new database is still buggy...
+
+2013-03-22 Mike Manilone <crtmike@gmx.us> - commit 2
+	* src/ratdb-client.c (ratdb_client_get_engine): added
+	* src/ratdb-daemon.c (ratdb_dbus_handler_new_database): handle "NewDatabase"
+	* src/ratdb-daemon.c (ratdb_daemon_get_client): added
+	* src/ratdb-daemon.c (ratdb_daemon_close_all): added
+	* src/ratdb-engine.[ch]: changed all gchar pointers which are supposed to be "const" to "const"
+
+2013-03-22 Mike Manilone <crtmike@gmx.us> - commit 1
+	* src/ratdb-daemon.c (ratdb_dbus_handler_remove_client): handle "RemoveClient"
+	* src/ratdb-dbus-interface.xml: added "RemoveClient"
+	* src/ratdb-loader.c (ratdb_loader_create_instance): test if there's @type to avoid crashes
+
+2013-03-21 Mike Manilone <crtmike@gmx.us> - commit 1
+	* src/ratdb-loader.c (ratdb_loader_init): use 'str_hash' 'str_equal' to avoid crashes
+	* src/ratdb-daemon.c: use GHashTable instead of GList to manage clients
+	* src/ratdb-client.c (ratdb_client_new): added checking for unsucessful engine creating
+	* src/ratdb-command.c, src/ratdb-command.h, src/ratdb-funcmanager.c, src/ratdb-funcmanager.h, src/ratdb-funcmanager-wrapper.h, src/ratdb-connection.c, ratdb-connection.h: good bye :-)
+
+2013-03-20 Mike Manilone <crtmike@gmx.us> - commit 1
+	* configure.ac: added libuuid
+	* ratdb-client.[ch]: added `engine' and `uuid'
+	* ratdb-daemon.c: changed `user_data' of _on_bus_acquired to GList**
+	* ratdb-loader.c (ratdb_loader_create_instance): added
+	* ratdb-uuid.[ch]: created
+
+2013-03-19 Mike Manilone <crtmike@gmx.us> - commit 1
+	* src/Makefile.am: Install ratdb-macros.h
+	* src/ratdb-macros.h (RATDB_FIND_REAL_FILENAME): added.
+	* src/ratdb-client.c: Remove UNIX domain socket
+	* src/ratdb-daemon.c (ratdb_dbus_handler_request): added..
+	* src/ratdb-loader.c (RatdbLoader): remove `module_list', added `loaded' (GHashTable)
+	* src/ratdb-loader.c (_ratdb_loader_load_dir): add module's real name into `loaded', not call the function but insert it into `loaded'
+	* src/ratdb-loader.h: changed RATDB_REGISTER_SYMBOL to "ratdb_create_instance"
+
+2013-03-17 Mike Manilone <crtmike@gmx.us> - commit 2
+	* src/ratdb-daemon.c: remove unneccessary code
+
+2013-03-17 Mike Manilone <crtmike@gmx.us> - commit 1
+	* src/generate-dbus.sh: helper for generating dbus code
+	* src/ratdb-deamon.c: dbus server works
+	* src/ratdb-dbus-interface.xml: removed a duplicated function
+
+2013-03-15 Mike Manilone <crtmike@gmx.us> - commit 1
+	* src/ratdb-dbus-interface.xml: completed; suits RatdbEngine
+
+2013-03-13 Mike Manilone <crtmike@gmx.us> - commit 1
+	* src/ratdb-engine.[ch]: continue moving forward
+	* src/ratdb-enums.h (RatdbMatch): FOUND => 1 (compatible with %TRUE); added TOOMANY
+
+2013-03-12 Mike Manilone <crtmike@gmx.us> - commit 1
+	* src/ratdb-engine.[ch]: move towards the right direction
+	* src/ratdb-dbus-interface.xml: created
+	* src/ratdb-enums.h: created
+	* src/ratdb-dbmmfile.[ch]: removed
+
+2013-03-10 Mike Manilone <crtmike@gmx.us> - commit 1
+	* dryrun.sh: clean unnecessary code
+	* configure.ac: added 'gmodule-2.0' into libraries list to avoid errors
+
+2013-03-03 Mike Manilone <crtmike@gmx.us> - commit 1
+	* dryrun.sh: updated
+	* contrib/RELEASE: updated
+
+2012-08-26 Mike Manilone <crtmike@gmx.us> - commit 1
+	* src/Makefile.am: updated
+	* src/ratdb-loader.c: make it a GObject; loading is working
+	* src/ratdb-backend.h: small changes
+	* src/ratdb-server.c: load backends
+
+2012-07-14 Mike Manilone <crtmike@gmx.us> - commit 1
+	* src/Makefile.am: Added new files; let it install a few headers into includedir/ratdb/ratdb
+	* libratdb/Makefile.am: let it install headers into includedir/libratdb/libratdb; this broke API
+	* libratdb/tests/connect/main.c: fix header including
+	* libratdb/tests/shell/main.c: fix header including
+	* src/ratdb-loader.c: Let it pass compilation
+	* RELEASE: updated, moved into contrib
+	* FUNNYNAMES: moved into contrib
+	* README: removed warning for updating the center repository
+
+2012-07-09 Mike Manilone <crtmike@gmx.us> - commit 1
+	* src/Makefile.am: Install headers for server-side development
+	* dryrun.sh: Updated
+	* src/ratdb-loader.[ch]: Created for dynamically loading backends
+	* src/backends/sqlite/*: Updated.
+	* src/configure.ac: Bump version of glib to 2.32.
+
+2012-06-16 Mike Manilone <crtmike@gmx.us> - commit 1
+	* *.[ch]: Renamed to start with `ratdb-' instead of `ratdb'.
+	* src/Makefile.am: added a fake library that helps generate documentation.
+	* src/*.c: many documentations imporvements.
+	* src/ratdb-dbmmfile.c: updated; switched to RatdbMacros.
+	* src/ratdb-daemon.h: moved configuration key to ratdbsettings.h
+	* src/ratdb-settings.h: moved configuration key from ratdbdaemon.h
+	* src/ratdb-macros.h: created.
+	* src/ratdb-file.c, src/ratdb-file.h, src/ratdb-engine.c, src/ratdb-engine.h: switched to RatdbMacros.
+	* src/ratdb-funcmanager.c, src/ratdb-funcmanager.h: created
+	* docs: generated documentation with gtk-doc.
+	* configure.ac: support for gtk-doc and libtool.
+	* Makefile.am: support for gtk-doc.
+	* libratdb/Makefile.am: support for GObject Introspection.
+	* ABOUT-DOCS: created.
+
+2012-03-01 Mike Manilone <crtmike@gmail.com> - commit 1
+	* src/ratdbfile.c, src/ratdbfile.h: let it be an interface. completed the interface.
+	* src/ratdbdbmmfile.c, src/ratdbdbmmfile.h: created.
+	* src/ratdbengine.c, src/ratdbengine.h: created.
+	* README: added something about my own development environment.
+	* INSTALL: added topic on a simple installation.
+
+2012-02-26 Mike Manilone <crtmike@gmail.com> - commit 1
+	* TODO: tasks confirmed. updated.
+
+2012-02-25 Mike Manilone <crtmike@gmail.com> - commit 2
+	* src/.clang-completion-error: removed.
+	* autoclean.sh: updated.
+
+2012-02-25 Mike Manilone <crtmike@gmail.com> - commit 1
+	* FUNNYNAMES: the explanation of the name, "RatDB".
+	* src/ratdbdaemon.c: don't use the deprecated interfaces of gthread 2.32.0.
+	* src, libratdb: use the standard directory organization.
+	* libratdb/libratdb.pc.in: new description
+	* configure.ac: be silent during compilation. updated for the new directory organization.
+
+2012-02-18 Mike Manilone <crtmike@gmail.com> - commit 1
+	* BUGS: bugs fixed.
+	* TODO: updated.
+	* src/server/ratdbconnection.c (ratdb_connection_accept): don't crash if no error is returned.
+	* src/server/ratdbclient.c (ratdb_client_dispose): don't unref the connection object. it may cause a runtime warning.
+	* src/server/ratdbcommand.c (ratdb_command_get): don't unref the socket object. it will close the connection.
+
+2012-02-17 Mike Manilone <crtmike@gmail.com> - commit 2
+	* README: re-added the warning about the development repo.
+	* BUGS: two bugs known.
+	* src/server/Makefile.am: added new files.
+	* src/server/ratdbsignal.c: clean up.
+	* src/server/ratdbmessage.c: clean up.
+	* src/server/ratdboptions.c: clean up.
+	* TODO: created.
+
+2012-02-17 Mike Manilone <crtmike@gmail.com> - commit 1
+	* README: removed warning for updating the center repository.
+
+2012-02-15 Mike Manilone <crtmike@gmail.com> - commit 2
+	* src/server/log: removed. I just made a mistake...
+
+2012-02-15 Mike Manilone <crtmike@gmail.com> - commit 1
+	* src/server/ratdbcommand.c (ratdb_command_wait): fixed the very very important bug of breaking connection. This bug exists for 2 months!
+	* BUGS (important#3): fixed this bug.
+	* INSTALL: fixed a typo.
+	* COPYING: fixed year.
+	* po/zh_CN.po: updated translations.
+
+2012-02-07 Mike Manilone <crtmike@gmail.com> - commit 2
+	* ChangeLog: added commit number of the day.
+	* BUGS (important#3): added a new important bug.
+	* BUGS: added bug number
+	* dryrun.sh: fixed permission (+x).
+	* TODO: removed. it's not valuable.
+	* INSTALL: updated.
+	* po/zh_CN.po: updated translations.
+	* NEWS: changed the old email address to the new one.
+
+2012-02-07 Mike Manilone <crtmike@gmail.com> - commit 1
+	* src/server/ratdbsettings.c: removed options handling.
+	* src/server/ratdbsettings.h: removed options handling. updated the macro defination.
+	* src/server/main.c (main): more user-friendly tip. don't abort. expanded the error message for MS Windows.
+	* src/server/ratdbserver.c (ratdb_server_new): removed application flag G_APPLICATION_IS_SERVICE.
+	* src/server/ratdbserver.c (ratdb_server_local_command_line): shorten the defination for keeping the GKiu style.
+	* src/server/ratdboptions.c: created. used for commandline arguments handling.
+	* src/server/ratdboptions.h: created.
+	* src/server/ratdbconnection.h: updated the macro defination.
+	* src/server/ratdbsignal.h: updated the macro defination.
+	* src/server/ratdbmessage.h: updated the macro defination.
+	* src/server/ratdbfile.h: updated the macro defination.
+	* src/server/ratdbdaemon.h: updated the macro defination.
+	* src/server/ratdbclient.h: updated the macro defination.
+
+2012-01-29 Mike Manilone <crtmike@gmail.com>
+	* autogen.sh: created.
+	* src/server/ratdbconnection.c (ratdb_connection_accept): added error handling for #ratdb_command_get.
+	* src/server/ratdbcommand.c (ratdb_command_wait): don't return 0 if error received
+	* src/server/ratdbsignal.c: created.
+	* src/server/ratdbsignal.h: created.
