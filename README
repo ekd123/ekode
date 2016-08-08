@@ -45,6 +45,13 @@ use them and tell me...)
 === home-tools
     Tools help you compile and install HShell-related things.
 
+=== TermHome, HSession, and HShell
+    the HOME desktop environment, but it's now out of maintenance
+
+=== ratdb
+    a database bridge, and it's out of maintenance
+
 === Tests
     my own tests code.
+
 
