@@ -44,7 +44,7 @@ This is a pretty naive implementation of JSON.
 Limitations:
 
 1. Bad debug support (no line number, no clear message)
-2. No comments
+2. No comment
 3. Only integers
 4. No \uXXXX support
 
@@ -58,6 +58,6 @@ The library might need to be completely refactored to solve limitation
 
 ```
 make
-./test    # you are not running the same code as used in benchmark!
+./test    # you are not running the same code as is used in benchmark!
 ```
 
