@@ -26,9 +26,9 @@ Sadly, mylib lacks many features and is much slower. Use GKeyFile instead!
 time
 
 ```
-real	0m1.243s
-user	0m1.187s
-sys	0m0.056s
+real	0m1.341s
+user	0m1.293s
+sys	0m0.046s
 ```
 
 Valgrind output
@@ -46,9 +46,9 @@ All heap blocks were freed -- no leaks are possible
 time
 
 ```
-real	0m0.528s
-user	0m0.461s
-sys	0m0.057s
+real	0m0.513s
+user	0m0.449s
+sys	0m0.053s
 ```
 
 Valgrind
@@ -68,6 +68,14 @@ Rerun with --leak-check=full to see details of leaked memory
 
 For counts of detected and suppressed errors, rerun with: -v
 ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+```
+
+### ConfigParser
+
+```
+real	0m8.130s
+user	0m7.967s
+sys	0m0.164s
 ```
 
 ## Implementation
