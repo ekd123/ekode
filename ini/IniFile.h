@@ -21,7 +21,7 @@ class IniFile
 {
 public:
     IniFile(std::istream &is);
-    ~IniFile() = default;
+    ~IniFile();
     void Parse(IniState next = INI_END);
     const IniSection *GetLastSection(std::string &secname) const;
     IniSection *TakeLastSection(std::string &secname);

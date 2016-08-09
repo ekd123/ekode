@@ -13,6 +13,12 @@ IniFile::IniFile(istream &is) :
 {
 }
 
+IniFile::~IniFile()
+{
+    for (auto i : sections)
+        delete i;
+}
+
 /// trim
 /// 
 /// remove trailing spaces and comments
