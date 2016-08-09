@@ -51,6 +51,12 @@ use them and tell me...)
 === ratdb
     a database bridge, and it's out of maintenance
 
+=== ini
+    ini parse library in C++. as an exercise
+
+=== json
+    json parse library in C++. as an exercise
+
 === Tests
     my own tests code.
 
