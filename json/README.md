@@ -42,6 +42,7 @@ ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 This is a pretty naive implementation of JSON.
 
 Limitations:
+
 1. Bad debug support (no line number, no clear message)
 2. No comments
 3. Only integers
@@ -56,7 +57,7 @@ The library might need to be completely refactored to solve limitation
 ## Run
 
 ```
-make test
+make
 ./test    # you are not running the same code as used in benchmark!
 ```
 
