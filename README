@@ -57,6 +57,9 @@ use them and tell me...)
 === json
     json parse library in C++. as an exercise
 
+=== bson
+    bson parse library in C++. as an exercise
+
 === Tests
     my own tests code.
 
