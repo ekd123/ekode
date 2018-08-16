@@ -17,9 +17,9 @@ main (gint argc,
     gtk_window_set_title (GTK_WINDOW (win), "Term Home");
     gtk_widget_show_all (win);
 
-    vte_terminal_fork_command_full (VTE_TERMINAL (tty), VTE_PTY_DEFAULT, NULL,
-                                    chld_argv, NULL, G_SPAWN_SEARCH_PATH, NULL, 
-                                    NULL, NULL, NULL);
+    vte_terminal_spawn_sync (VTE_TERMINAL (tty), VTE_PTY_DEFAULT, NULL,
+                             chld_argv, NULL, G_SPAWN_SEARCH_PATH, NULL, 
+                             NULL, NULL, NULL, NULL);
     g_signal_connect (win, "delete-event", G_CALLBACK (gtk_main_quit), NULL);
     g_signal_connect (tty, "child-exited", G_CALLBACK (gtk_main_quit), NULL);
 
